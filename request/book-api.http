@@ -6,6 +6,13 @@ GET http://localhost:3000/books/1
 
 ###Create a Book
 POST http://localhost:3000/books
+Content-Type: application/json
+
+{
+  "title": "ABC",
+  "author": "Nam CT",
+  "description": "Hihi Do ngoc"
+}
 
 ###Delete a Book By ID
 DELETE http://localhost:3000/books/1
