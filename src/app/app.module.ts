@@ -6,6 +6,7 @@ import {BookComponent} from './book/book.component';
 import {BookListComponent} from './book-list/book-list.component';
 import {NavBarComponent} from './nav-bar/nav-bar.component';
 import {RouterModule, Routes} from '@angular/router';
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 const routes: Routes = [
   {
@@ -23,9 +24,10 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule {
