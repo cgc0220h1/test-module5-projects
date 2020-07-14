@@ -12,7 +12,7 @@
     <label for="book-description">Mô tả</label>
     <textarea id="book-description" cols="30" rows="10" [formControl]="bookDescription"></textarea>
   </div>
-  <button type="submit">Thêm sách</button>
+  <button type="submit">{{buttonLabel}}</button>
   <button routerLink="">Thoát</button>
 </form>
 <p>{{message}}</p>

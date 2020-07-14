@@ -23,4 +23,8 @@ export class BookService {
   addOneBook(book: Book): Observable<Book> {
     return this.httpClient.post<Book>(`${this.API_URL}`, book);
   }
+
+  updateOneBook(book: Book): Observable<Book> {
+    return this.httpClient.put<Book>(`${this.API_URL}/${book.id}`, book);
+  }
 }
