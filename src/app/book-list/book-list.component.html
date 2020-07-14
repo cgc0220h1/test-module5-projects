@@ -15,10 +15,10 @@
   <ng-container *ngFor="let book of bookList">
     <tr>
       <td>{{book.id}}</td>
-      <td><a routerLink="">{{book.title}}</a></td>
+      <td><a [routerLink]="['books', book.id]">{{book.title}}</a></td>
       <td>{{book.author}}</td>
-      <td><a routerLink="">Xoá</a></td>
-      <td><a routerLink="">Sửa</a></td>
+      <td><a [routerLink]="['books', book.id, 'delete']">Xoá</a></td>
+      <td><a [routerLink]="['books', book.id, 'edit']">Sửa</a></td>
     </tr>
   </ng-container>
 </table>
