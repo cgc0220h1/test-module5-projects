@@ -6,13 +6,18 @@ import {BookComponent} from './book/book.component';
 import {BookListComponent} from './book-list/book-list.component';
 import {NavBarComponent} from './nav-bar/nav-bar.component';
 import {RouterModule, Routes} from '@angular/router';
-import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {BookFormComponent} from './book-form/book-form.component';
 
 const routes: Routes = [
   {
     path: '',
     component: BookListComponent
   },
+  {
+    path: 'books/:id',
+    component: BookComponent
+  }
 ];
 
 @NgModule({
@@ -20,7 +25,8 @@ const routes: Routes = [
     AppComponent,
     BookComponent,
     BookListComponent,
-    NavBarComponent
+    NavBarComponent,
+    BookFormComponent
   ],
   imports: [
     BrowserModule,
