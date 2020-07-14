@@ -9,7 +9,8 @@ import {RouterModule, Routes} from '@angular/router';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {BookFormComponent} from './book-form/book-form.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {ReactiveFormsModule} from "@angular/forms";
+import {ReactiveFormsModule} from '@angular/forms';
+import {BookDeleteComponent} from './book-delete/book-delete.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'books/:id/edit',
     component: BookFormComponent
+  },
+  {
+    path: 'books/:id/delete',
+    component: BookDeleteComponent
   }
 ];
 
@@ -36,7 +41,8 @@ const routes: Routes = [
     BookComponent,
     BookListComponent,
     NavBarComponent,
-    BookFormComponent
+    BookFormComponent,
+    BookDeleteComponent
   ],
   imports: [
     BrowserModule,
